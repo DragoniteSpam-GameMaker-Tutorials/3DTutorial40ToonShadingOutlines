@@ -61,4 +61,11 @@ surface_set_target_ext(1, surface_extra);
 matrix_set(matrix_world, matrix_build(250, 250, 0, 0, 0, link_rotation, 1, 1, 1));
 vertex_submit(vb_link, pr_trianglelist, sprite_get_texture(spr_link, 0));
 matrix_set(matrix_world, matrix_build_identity());
+
+for (var i = 0; i < array_length(rock_positions); i++) {
+    matrix_set(matrix_world, matrix_build(rock_positions[i][0], rock_positions[i][1], 0, 0, 0, current_time / 250, 1, 1, 1));
+    vertex_submit(vb_rock, pr_trianglelist, sprite_get_texture(spr_rock, 0));
+    matrix_set(matrix_world, matrix_build_identity());
+}
+
 shader_reset();

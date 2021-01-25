@@ -70,3 +70,9 @@ time = 0;
 surface_extra = surface_create(surface_get_width(application_surface), surface_get_height(application_surface));
 
 application_surface_draw_enable(false);
+
+vb_rock = load_model("rock.d3d");
+rock_positions = array_create(40);
+for (var i = 0; i < array_length(rock_positions); i++) {
+    rock_positions[i] = [random(room_width), random(room_height)];
+}
