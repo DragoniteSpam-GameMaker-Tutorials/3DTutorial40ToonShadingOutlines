@@ -11,7 +11,7 @@ struct PSInput {
 
 struct PSOutput {
     float4 base: SV_TARGET0;
-    float4 extra: SV_TARGET1;
+    float4 normals: SV_TARGET1;
 };
 
 uniform float3 lightPosition;
@@ -42,9 +42,7 @@ PSOutput main(PSInput input) {
     float4 white = float4(1., 1., 1., 1.);
     output.base = starting_color * float4(min(light_ambient + lightColor * att * NdotL_ramp, white).rgb, starting_color.a);
     // Normals to the render target
-    output.extra = float4((input.worldNorm / 2.0) + float3(0.5, 0.5, 0.5), 1.);
-    // Depth to the render target
-    //output.extra = float4(input.depth / 100., input.depth / 100., input.depth / 100., 1.);
+    output.normals = float4((input.worldNorm / 2.0) + float3(0.5, 0.5, 0.5), 1.);
     
     return output;
 }
