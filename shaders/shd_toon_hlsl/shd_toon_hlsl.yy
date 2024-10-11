@@ -1,11 +1,12 @@
 {
-  "type": 3,
-  "parent": {
-    "name": "3D Tutorial 40 - Toon Shading - Outlines",
-    "path": "3D Tutorial 40 - Toon Shading - Outlines.yyp",
+  "$GMShader":"",
+  "%Name":"shd_toon_hlsl",
+  "name":"shd_toon_hlsl",
+  "parent":{
+    "name":"3D Tutorial 40 - Toon Shading - Outlines",
+    "path":"3D Tutorial 40 - Toon Shading - Outlines.yyp",
   },
-  "resourceVersion": "1.0",
-  "name": "shd_toon_hlsl",
-  "tags": [],
-  "resourceType": "GMShader",
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":3,
 }
